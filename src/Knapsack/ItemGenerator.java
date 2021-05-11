@@ -1,5 +1,7 @@
 package Knapsack;
 
+import javax.swing.*;
+
 public class ItemGenerator
 {
     private int[] weights;
@@ -38,9 +40,17 @@ public class ItemGenerator
         {
             itemList = itemList +"Item" + (i + 1) + " weight: " + weights[i] + " value: " + values[i] + "\n";
         }
-
         return itemList;
+    }
 
+    public String[] showItems_StringList()
+    {
+        String[] itemList = new String[amountOfItems];
+        for (int i = 0; i < amountOfItems; i++)
+        {
+            itemList[i] = "Item" + (i + 1) + " weight: " + weights[i] + " value: " + values[i];
+        }
+        return itemList;
     }
 
     public int[] getWeights()

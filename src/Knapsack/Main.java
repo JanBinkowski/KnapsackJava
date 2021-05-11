@@ -88,7 +88,7 @@ public class Main extends Frame implements ActionListener
                 int[] weights = generator.getWeights();
 
                 Algorithm algo = new Algorithm();
-                String solution = "";
+                String solution;
                 solution = "Solution:        " + algo.KnapSack(capacity_is, weights,values, amountOfItems).getResult();
                 solution = solution + "\nSolution weight: " + algo.KnapSack(capacity_is, weights, values, amountOfItems).getResultWeight();
                 solution = solution + "\n\n" + algo.KnapSack(capacity_is, weights, values, amountOfItems).printUsesItemsStats_String();
@@ -97,9 +97,9 @@ public class Main extends Frame implements ActionListener
 
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         new Main();
-    }
+    }*/
 
     public static boolean IsNumber(String str) {
         try {

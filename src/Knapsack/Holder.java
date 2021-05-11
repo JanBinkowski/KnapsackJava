@@ -1,12 +1,14 @@
 package Knapsack;
 
+import javax.swing.*;
+
 public class Holder
 {
     //Result item statistics
     private int[] usedValues;
     private int[] usedWeights;
-    private int resultWeight = 0;
-    private int resultValue = 0;
+    private int resultWeight;
+    private int resultValue;
 
     public Holder(int[] values, int[] weights)
     {
@@ -59,6 +61,16 @@ public class Holder
         for (int i = 0; i < usedValues.length; i++)
         {
             insertedItems = insertedItems + "Used item stats:"  + " weight: " + usedWeights[i] + " value: " + usedValues[i] + "\n";
+        }
+        return insertedItems;
+    }
+
+    public String[] printUsesItemsStats_StringList()
+    {
+        String[] insertedItems = new String[usedValues.length];
+        for (int i = 0; i < usedValues.length; i++)
+        {
+            insertedItems[i] = "Used item stats:"  + " weight: " + Integer.toString(usedWeights[i]) + " value: " + Integer.toString(usedValues[i]);
         }
         return insertedItems;
     }
