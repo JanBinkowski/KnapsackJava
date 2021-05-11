@@ -31,6 +31,18 @@ public class ItemGenerator
         }
     }
 
+    public String showItems_String()
+    {
+        String itemList = "";
+        for (int i = 0; i < amountOfItems; i++)
+        {
+            itemList = itemList +"Item" + (i + 1) + " weight: " + weights[i] + " value: " + values[i] + "\n";
+        }
+
+        return itemList;
+
+    }
+
     public int[] getWeights()
     {
         return weights;

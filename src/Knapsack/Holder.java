@@ -52,6 +52,16 @@ public class Holder
             System.out.println("Used item stats:"  + " weight: " + usedWeights[i] + " value: " + usedValues[i]);
         }
     }
+
+    public String printUsesItemsStats_String()
+    {
+        String insertedItems = "";
+        for (int i = 0; i < usedValues.length; i++)
+        {
+            insertedItems = insertedItems + "Used item stats:"  + " weight: " + usedWeights[i] + " value: " + usedValues[i] + "\n";
+        }
+        return insertedItems;
+    }
 }
 
 
